@@ -34,6 +34,16 @@
             <version>${quarkus.platform.version}</version>
         </dependency>
     </dependencies>
+   <dependencies>
+    <!-- Other dependencies -->
+
+    <!-- Add the Jakarta RESTful Web Services API dependency -->
+      <dependency>
+        <groupId>jakarta.ws.rs</groupId>
+        <artifactId>jakarta.ws.rs-api</artifactId>
+        <version>3.0.0</version>
+      </dependency>
+    </dependencies>
 
     <build>
         <plugins>
