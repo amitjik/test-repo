@@ -1,10 +1,12 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library  SeleniumLibrary
 
 *** Variables ***
-${URL}     https://www.keenable.in
+${BROWSER}    chrome
+${CHROMEDRIVER_PATH}    /usr/local/bin/chromedriver
 
 *** Test Cases ***
 Click A Button Using XPath
-    Open Browser    ${URL}        chrome
-    Maximize Browser Window
+    Open Browser    https://example.com    ${BROWSER}    executable_path=${CHROMEDRIVER_PATH}
+    Click Element   xpath=//button[text()='Click Me']
+    Close Browser
